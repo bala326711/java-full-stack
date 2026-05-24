@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Weather Prediction Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌦 Weather API Dashboard</h1>
+
+<div class="search">
+<input type="text" id="cityInput" placeholder="Enter city">
+<button onclick="getWeather()">Search</button>
+<button onclick="getLocationWeather()">📍</button>
+</div>
+
+<!-- Dashboard Navigation -->
+
+<div class="tabs">
+<button onclick="showTab('current')">Current Weather</button>
+<button onclick="showTab('forecast')">5 Day Forecast</button>
+<button onclick="showTab('prediction')">Prediction Chart</button>
+</div>
+
+<!-- Current Weather -->
+
+<div id="current" class="dashboard">
+
+<h2 id="cityName"></h2>
+
+<img id="weatherIcon">
+
+<p id="temperature"></p>
+<p id="description"></p>
+<p id="humidity"></p>
+<p id="wind"></p>
+
+</div>
+
+<!-- Forecast -->
+
+<div id="forecast" class="dashboard">
+
+<h2>5 Day Forecast</h2>
+
+<div id="forecastCards" class="forecast"></div>
+
+</div>
+
+<!-- Prediction -->
+
+<div id="prediction" class="dashboard">
+
+<h2>Temperature Prediction</h2>
+
+<canvas id="tempChart"></canvas>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
